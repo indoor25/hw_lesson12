@@ -6,33 +6,199 @@
 // @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 // @import "bootswatch";
+
+$gradient: linear-gradient(#f2f2f2, #eee 50%, #dbdbdb);
+
 // Then add additional custom code here
-// $primary: $cyan;
+html {
+  overflow-y: scroll;
+}
 
-// .dropdown-toggle::after {
-//   color: white;
-// }
+body {
+  background-color: $white;
+}
 
-// .main-bgc {
-//   background-color: $cyan;
-// }
+.logo {
+  &-img {
 
-// .navbar {
-//   box-shadow: none;
-// }
+    width: 70px;
+  }
 
-// input.form-control {
-//   &:focus {
-//     box-shadow: none;
-//     outline: 0;
-//   }
-// }
+  &-name {
+    margin: 0;
+    text-shadow: 2px 2px 2px $black;
+  }
 
-// .dropdown-item {
+  &-link {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: 10px;
+  }
+}
 
-//   &:hover,
-//   &:hover {
-//     background-color: $cyan;
-//   }
+.wrapper {
+  min-height: 100vh;
+}
 
-// }
+.row {
+  min-width: 100%;
+}
+
+.main {
+  min-height: 100%;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.carousel {
+  max-width: 300px;
+}
+
+.blockquote {
+  font-size: $spacer;
+}
+
+.table-group-divider {
+  border-color: $secondary;
+}
+
+.divider-hidden {
+  @include media-breakpoint-between(lg, xxl) {
+    display: none;
+  }
+}
+
+.card-height {
+  min-height: 100%;
+}
+
+.navbar {
+  box-shadow: none;
+  background-image: $gradient;
+
+  &-position {
+    @include media-breakpoint-down(md) {
+      min-width: 100%;
+      padding-left: 0.5rem;
+      display: flex;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #f2f2f2;
+    }
+  }
+
+  &-nav {
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+}
+
+nav {
+  &-link {
+    margin: 10px 0;
+    color: aqua;
+  }
+}
+
+.dropdown {
+  &-menu {
+    background-color: #f2f2f2;
+    border: none;
+  }
+
+  &-item {
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+.fa-brands {
+  color: $white;
+}
+
+.btn {
+
+  background-color: $white;
+
+  &-primary {
+
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
+
+  &.btn-search {
+    &:active {
+      background-color: $white;
+      border: 1px solid $gray-400;
+    }
+
+    &:hover {
+      background-color: $gray-300;
+    }
+  }
+
+  &-search {
+    background-color: $white;
+    border: 1px solid $gray-400;
+  }
+}
+
+.list {
+
+  &-group {
+    margin-top: 5px;
+
+    &-item {
+      color: $navbar-light-color;
+      font-weight: $font-weight-semibold;
+
+      &-action {
+        &:hover {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.lside {
+  &-wrapper {
+    @include media-breakpoint-between(lg, xxl) {
+      float: left;
+      padding-right: 30px;
+    }
+  }
+
+  &-blockquote {
+    @include media-breakpoint-between(lg, xxl) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      align-items: center;
+    }
+  }
+}
+
+.rside {
+  &-link {
+    color: $black;
+
+    &:hover {
+      color: $gray-600;
+    }
+  }
+}
+
+input.form-control {
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+}
