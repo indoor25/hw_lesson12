@@ -3,13 +3,8 @@
 
 // Include any default variable overrides here (though functions won't be available)
 
-// @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-// @import "bootswatch";
 
-$gradient: linear-gradient(#f2f2f2, #eee 50%, #dbdbdb);
-
-// Then add additional custom code here
 html {
   overflow-y: scroll;
 }
@@ -18,24 +13,7 @@ body {
   background-color: $white;
 }
 
-.logo {
-  &-img {
-
-    width: 70px;
-  }
-
-  &-name {
-    margin: 0;
-    text-shadow: 2px 2px 2px $black;
-  }
-
-  &-link {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    align-items: center;
-    gap: 10px;
-  }
-}
+$gradient: linear-gradient(#f2f2f2, #eee 50%, #dbdbdb);
 
 .wrapper {
   min-height: 100vh;
@@ -55,10 +33,6 @@ body {
   max-width: 300px;
 }
 
-.blockquote {
-  font-size: $spacer;
-}
-
 .table-group-divider {
   border-color: $secondary;
 }
@@ -71,6 +45,25 @@ body {
 
 .card-height {
   min-height: 100%;
+}
+
+.logo {
+  &-img {
+
+    width: 70px;
+  }
+
+  &-name {
+    margin: 0;
+    text-shadow: 2px 2px 2px $black;
+  }
+
+  &-link {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .navbar {
@@ -174,6 +167,11 @@ nav {
       float: left;
       padding-right: 30px;
     }
+  }
+
+
+  .blockquote {
+    font-size: $spacer;
   }
 
   &-blockquote {
